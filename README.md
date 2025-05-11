@@ -8,27 +8,27 @@
 
 ### Проверка обработки CDR-записей (вызовы)
 
-- ** `processCall_ShouldSaveCallData()`**
+-  `processCall_ShouldSaveCallData()`
   - Проверяет, что при передаче валидной записи звонка:
     - API возвращает статус 201 Created
     - Ответ содержит ID
     - Данные корректно сохраняются (проверка по GET)
 
-- ** `processCall_WithInvalidData_ShouldReturnBadRequest()`**
+-  `processCall_WithInvalidData_ShouldReturnBadRequest()`
   - Отправка заведомо невалидных данных
   - Проверяется, что возвращается 400 Bad Request и сообщение об ошибке
 
 ### Проверка работы с абонентами
 
-- ** `getSubscriberInfo_ShouldReturnValidData()`**
+-  `getSubscriberInfo_ShouldReturnValidData()`
   - Проверяет:
     - что по существующему MSISDN возвращается 200 OK
     - в ответе есть все ключевые поля (`balance`, `tariffId`, `name`)
 
-- ** `getSubscriberInfo_ForNonExistentSubscriber_ShouldReturnNotFound()`**
+-  `getSubscriberInfo_ForNonExistentSubscriber_ShouldReturnNotFound()`
   - Запрос к несуществующему абоненту должен возвращать 404
 
-- ** `updateBalance_ShouldChangeSubscriberBalance()`**
+-  `updateBalance_ShouldChangeSubscriberBalance()`
   - Проверяет:
     - успешное обновление баланса абонента
     - корректный расчет нового баланса
@@ -42,9 +42,4 @@
   - `/api/calls`
   - `/api/subscribers`
 
-## Запуск тестов
 
-Тесты можно запустить командой:
-
-```bash
-./gradlew test
