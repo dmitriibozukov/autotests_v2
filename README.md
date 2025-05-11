@@ -14,7 +14,7 @@
 
 | №  | Название теста                             | Endpoint              | Описание |
 |----|---------------------------------------------|-----------------------|----------|
-| 1  | `generateCdrFile_ShouldReturnAccepted`      | `POST /api/cdr/generate` | Проверка успешного запуска генерации CDR-файла. Ожидается статус `202 Accepted`. |
+| ATC-HRS-001  | `generateCdrFile_ShouldReturnAccepted`      | `POST /api/cdr/generate` | Проверка успешного запуска генерации CDR-файла. Ожидается статус `202 Accepted`. |
 | 2  | `getLastCdrFile_ShouldReturnValidStructure` | `GET /api/cdr/last`   | Проверка структуры ответа и статуса при запросе последнего CDR-файла. |
 | 3  | `getCdrFileByDate_ShouldReturnValidData`    | `GET /api/cdr/by-date?date=YYYY-MM-DD` | Проверка фильтрации CDR-файлов по дате. |
 | 4  | `getCdrFileByInvalidDate_ShouldReturnBadRequest` | `GET /api/cdr/by-date?date=invalid` | Проверка обработки некорректного параметра даты. Ожидается `400 Bad Request`. |
